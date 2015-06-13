@@ -5,7 +5,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: #424242; 
 }
 
 hr{
@@ -14,14 +15,14 @@ hr{
 }
 #landing{	
 	background-image: url('/images/landing.jpg');
-	height: 800px;
+	height: 700px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;	
 }
 
 #logo{
-	background-image: url("/images/navbar/logo_dump.jpg");
+	background-image: url("/images/navbar/thebright_logo1.jpg");
 	height: 100px;		
 	background-repeat: no-repeat;
 	background-position: center;
@@ -58,17 +59,64 @@ hr{
 
 .shotcuts{
 	background-color: #FFF;
-	height: 380px;
-	padding-top: 10px;	
-	/*padding-bottom: 30px;	*/
+	height: 480px;	
+	border-top: 5px solid #0277BD;
+	border-bottom: 5px solid #0277BD;	
+	padding-top: 20px;	
 }
 .s-item{
 	height: 170px;	
-	padding: 30px;
 }
-.s-item:hover{
-	background-color: #66CC99;
+.s-item img{
+	height: 200px;
+	margin-bottom: 20px;
+	border: 0 solid #43A047;
+	border-radius: 30px;
+}
+.s-item img:hover{
+	border: 5px solid #2E7D32;
+}
+
+.poster{
+	height: 400px;			
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 100% 300%;	
+	margin-bottom: 50px;
+}
+#m4-poster-header{
+	background-color: #4CAF50;
 	color: #FFF;
+}
+#m5-poster-header{
+	background-color: #03A9F4;
+	color: #FFF;
+}
+#m6-poster-header{
+	background-color: #FF5722;
+	color: #FFF;
+}
+#m4{
+	background-image: url('/images/poster/m45_poster.png');
+	border-bottom: 5px solid #4CAF50; 
+}
+
+#m5{
+	background-image: url('/images/poster/m45_poster1.png');
+	border-bottom: 5px solid #03A9F4; 
+}
+
+#m6{
+	background-image: url('/images/poster/m6_poster.png');
+	border-bottom: 5px solid #FF5722;
+}
+
+#knows{
+	background-image: url('/images/about_us.jpg');
+	height: 800px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;	
 }
 
 .footer{

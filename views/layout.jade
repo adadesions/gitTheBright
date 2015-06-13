@@ -9,7 +9,7 @@ html
   body
     .container
       .row        
-        #logo.col-md-5
+        a(href="/home"): #logo.col-md-5
         .col-md-1                  
         #social.col-md-6.text-right       	
           a(href="#"): i.fa.fa-facebook-official.fa-3x.fa-fw
@@ -31,7 +31,7 @@ html
                          #bs-example-navbar-collapse-1.collapse.navbar-collapse
                              ul#topbar.nav.navbar-nav.text-right
                                  li.active
-                                     a(href='#')
+                                     a(href='/home')
                                          | หน้าแรก                                        
                                          span.sr-only (current)
                                   li.dropdown
@@ -40,9 +40,9 @@ html
                                          span.caret
                                       ul.dropdown-menu(role='menu')
                                         li
-                                          a(href="#") รู้จักกับเดอะไบร์ท
+                                          a(href="/about/knows") รู้จักกับเดอะไบร์ท
                                         li
-                                          a(href="#") ทำไมต้องเดอะไบร์ท
+                                          a(href="/about/why") ทำไมต้องเดอะไบร์ท
                                    li
                                      a(href="#")
                                       | ทีมเดอะไบร์ท
@@ -50,7 +50,7 @@ html
                                      a(href="#")
                                       | เด็กเก่ง
                                    li
-                                     a(href="#")
+                                     a(href="/brochure")
                                       | คอร์สเรียน
                                    li
                                      a(href="#")
@@ -73,5 +73,6 @@ html
          .row
              .footer
                h1 TheBright.in.th
+               p footer menu and link
     script(src="/bower_components/jquery/dist/jquery.min.js")          
     script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
