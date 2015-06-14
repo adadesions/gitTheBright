@@ -23,4 +23,14 @@ router.get('/about/:sec', function(req, res, next) {
 		res.render('index');
 });
 
+router.get('/form/:formname', function(req, res, next) {
+	if(req.params.formname == 'register')
+		res.render('register');
+	else if(req.params.formname == 'payment')
+		res.render('payment');
+	else
+		res.render('index');
+});
+
+
 module.exports = router;

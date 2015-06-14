@@ -1,0 +1,70 @@
+extends layout
+block content
+	.container
+		.row
+			.register-form.col-lg-12.col-sm-12
+				h2 แบบฟอร์มลงทะเบียนเรียน
+				br
+				form#register_form(method="post" action='')
+						.form-group
+							label เลขบัตรประจำตัวประชาชน
+							input.form-control(type="text" name="id_card" placeholder="ex.1234567891012")
+						.form-group
+							label คำนำหน้า
+							select.form-control(type="text" name="prefix")
+								option(value="นาย") นาย
+								option(value="นางสาว") นางสาว
+						.form-group
+							label ชื่อ - นามสกุล
+							input.form-control(type="text" name="full_name")
+						.form-group
+							label ชื่อเล่น
+							input.form-control(type="text" name="nickname")
+						.form-group
+							label วันเกิด							
+								input#datetimepicker1.form-control(type="text" name="birthday")
+							i.fa.fa-calendar.fa-2x
+						.form-group
+							label โรงเรียน
+							input.form-control(type="text" name="schoolname")
+						.form-group
+							label ชั้น
+							select.form-control(type="text" name="class")
+								option(value="ม.4") ม.4
+								option(value="ม.5") ม.5
+								option(value="ม.6") ม.6
+						.form-group
+							label สาย
+							select.form-control(type="text" name="program")
+								option(value="สายวิทย์") สายวิทย์
+								option(value="สานศิลป์") สายศิลป์
+						.form-group
+							label ที่อยู่ที่สามารถจัดส่งเอกสารได้
+							textarea.form-control(type="text" name="address" rows="4" cols="50")
+						.form-group
+							label เบอร์โทรศัพท์(ที่สามารถติดต่อได้)
+							input.form-control(type="text" name="mobile")									
+						.form-group
+							label อีเมลล์
+							input.form-control(type="email" name="email")
+						.form-group
+							label Facebook
+							input.form-control(type="text" name="facebook")
+						.form-group
+							label Line
+							input.form-control(type="text" name="line")						
+						.form-group
+							label ชื่อ-สกุล ผู้ปกครอง
+							input.form-control(type="text" name="parents")
+						.form-group
+							label ความสัมพันธ์
+							select.form-control(type="text" name="parents_relationship")
+								option(value="บิดา") บิดา
+								option(value="มารดา") มารดา
+								option(value="ญาติ") ญาติ
+						.form-group
+							label เบอร์โทรศัพท์ผู้ปกครอง
+							input.form-control(type="text" name="parents_number")					
+					button.btn.btn-success.pull-right(type='submit' form='register_form') ลงทะเบียนเรียน
+			
+			

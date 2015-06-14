@@ -2,6 +2,10 @@ body {
   padding-top: 20px;  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #F2F1EF;
+  background-image: url('/images/landing.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 120% 100%;	
 }
 
 a {
@@ -13,6 +17,11 @@ hr{
 	background-color: #BFBFBF;
 	height: 1px;
 }
+nav{
+	margin-top: 20px;
+}
+
+
 #landing{	
 	background-image: url('/images/landing.jpg');
 	height: 700px;
@@ -60,8 +69,7 @@ hr{
 .shotcuts{
 	background-color: #FFF;
 	height: 480px;	
-	border-top: 5px solid #0277BD;
-	border-bottom: 5px solid #0277BD;	
+	border-top: 5px solid #0277BD;	
 	padding-top: 20px;	
 }
 .s-item{
@@ -70,11 +78,10 @@ hr{
 .s-item img{
 	height: 200px;
 	margin-bottom: 20px;
-	border: 0 solid #43A047;
 	border-radius: 30px;
 }
 .s-item img:hover{
-	border: 5px solid #2E7D32;
+	border: 8px solid #36D7B7;
 }
 
 .poster{
@@ -113,11 +120,31 @@ hr{
 
 #knows{
 	background-image: url('/images/about_us.jpg');
-	height: 800px;
+	height: 650px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;	
 }
+
+.register-form{
+	background-color: #FFF;
+	padding-top: 20px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+}
+.form-group i{
+	margin-left: 10px;	
+}
+
+.payment-form{
+	background-color: #FFF;
+	padding-top: 20px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+}
+
 
 .footer{
 	background-color: #000;

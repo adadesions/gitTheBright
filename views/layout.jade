@@ -5,6 +5,7 @@ html
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")
     link(rel='stylesheet' href='/stylesheets/style.css')
   body
     .container
@@ -12,13 +13,11 @@ html
         a(href="/home"): #logo.col-md-5
         .col-md-1                  
         #social.col-md-6.text-right       	
-          a(href="#"): i.fa.fa-facebook-official.fa-3x.fa-fw
-          a(href="#"): i.fa.fa-youtube-square.fa-3x.fa-fw
-          a(href="#"): i.fa.fa-instagram.fa-3x.fa-fw
-          a(href="#"): i.fa.fa-google-plus-square.fa-3x.fa-fw
+          a(href="#"): i.fa.fa-facebook-official.fa-4x.fa-fw
+          a(href="#"): i.fa.fa-youtube-square.fa-4x.fa-fw
+          a(href="#"): i.fa.fa-instagram.fa-4x.fa-fw          
           br
-          button(type="button").btn.btn-success สมัครเรียน
-       hr
+          a(href="/form/register"): button(type="button").btn.btn-success สมัครเรียน       
       .row
         nav.navbar.navbar-default
             .container-fluid
@@ -56,10 +55,10 @@ html
                                      a(href="#")
                                       | ภาพประทับใจ
                                    li
-                                     a(href="#")
+                                     a(href="/form/register")
                                       | สมัครเรียน
                                    li
-                                     a(href="#")
+                                     a(href="/form/payment")
                                       | แจ้งชำระเงิน
                                    li
                                      a(href="#")
@@ -76,3 +75,18 @@ html
                p footer menu and link
     script(src="/bower_components/jquery/dist/jquery.min.js")          
     script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+    script(type="text/javascript" src="/bower_components/moment/min/moment.min.js")
+    script(type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js")
+    script(type='text/javascript').
+      $(document).ready(function(){
+          $('#datetimepicker1').datetimepicker({
+              format: "DD/MM/YYYY",
+              viewMode: 'years'
+            });
+          $('#datetimepicker2').datetimepicker();
+
+          $('.fa-calendar').click(function(){
+              $('#datetimepicker1').trigger("focus");
+              $('#datetimepicker2').trigger("focus");
+            });
+        });
