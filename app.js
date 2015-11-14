@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var moment = require('moment');
+var upload = multer({dest: './public/uploads/'})
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/theBrightDb');
@@ -29,13 +30,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(multer({ 
-  dest: './public/uploads/',
-  rename: function (fieldname, filename) {    
-    return "slip-" + moment().format('MMMM Do YYYY-h:mm:ss a');
-  }
+// app.use(multer({
+//   dest: './public/uploads/'})
+//   .single(function () {return "slip-" + moment().format('MMMM Do YYYY-h:mm:ss a');}));
 
-}));
+
 
 app.use('/', routes);
 app.use('/users', users);
