@@ -1,0 +1,16 @@
+extends layout
+block content 
+	.container.visible-lg-block.visible-md-block
+		.row
+			a(href="#" data-toggle="modal" data-target="#mapsModal"): #contactus.col-lg-12.col-md-12
+	.container.visible-sm-block
+		.row
+			#contactus.col-sm-12
+
+	#mapsModal.modal.fade(role="dialog")
+		.modal-dialog
+			.modal-content
+				.modal-header
+					h4.modal-title The Bright Maps
+				.modal-body
+					img.col-lg-12(src="/images/maps-large.jpg")

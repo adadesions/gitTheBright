@@ -1,0 +1,24 @@
+extend layout
+block content
+  .container(ng-app="listsApp" ng-controller="listCtrl")
+    .row
+      #expo-lists
+        h1.text-center ตรวจสอบรายชื่อ VIP Zone
+        h4 Search : 
+          input(type="text" ng-model='search')
+        table.table.table-hover          
+          th TheBright Id
+          th Full Name
+          th School
+          th SmartPass
+          tr(ng-repeat="list in data | filter:search | orderBy:thebright_id").text-center            
+            td {{list.thebright_id}}
+            td {{list.full_name}}
+            td {{list.school}}
+            td 
+              a(href="/qr-vip/{{list.thebright_id}}") Print
+      
+
+  script(src="/bower_components/angular/angular.min.js")
+  script(src="/javascripts/controllers/listsController.js")
+      

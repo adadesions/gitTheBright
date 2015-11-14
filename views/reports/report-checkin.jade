@@ -1,0 +1,22 @@
+extends report-layout
+block content
+  .container-fluid
+    .row
+      .report-body
+        h1.text-center Checkin report
+        h4.text-center NumberOfStudents = #{records.length} records
+        .pi.collapse= paids_index
+        table.table.table-hover.col-lg-12
+          tr
+            th No.
+            th Fullname
+            th School
+            th Mobile No.
+            th Email
+          each record,index in records.length ? records:['No record']
+            tr.warning.text-center
+              td=index+1              
+              td=record.full_name
+              td=record.school              
+              td=record.mobile
+              td=record.email

@@ -1,17 +1,42 @@
 extends layout
-block content
+block content			
 	.container
 		.row
+			#carousel-example-generic.carousel.slide(data-ride='carousel')				
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')				
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='/images/banner/banner-apply.jpg', alt='...')
+		.row
 			.register-form.col-lg-12.col-sm-12
+				.btn-group.btn-group-justified(role="group" aria-label="...")					
+					.btn-group(role="group")
+						a(href="/how-to-apply"): button.btn.btn-warning(type="button") วิธีการสมัคร
+					.btn-group(role="group")
+						a(href="/pdf/expo-pay.pdf"): button.btn.btn-warning(type="button") พิมพ์ใบจ่ายเงิน
 				h2 แบบฟอร์มลงทะเบียนเรียน
 				br
-				form#register_form(method="post" action='')
+				.alert.alert-danger.hidden(role="alert") *โปรดกรอกให้ครบทุกช่องค่ะ
+				form#register_form-lg(method="post" action='/db/register')
+						.form-group
+							label คอร์สเรียน
+							select.form-control(type="text" name="course")
+								//- option(value="")  
+								//- option(value="HYBRID M.4") HYBRID M.4 
+								//- option(value="HYBRID M.5") HYBRID M.5
+								//- option(value="COACH ME") COACH ME (คอร์สรับรองผล)
+								option(value="THE BRIGHT EDUCATION EXPO 2015") THE BRIGHT EDUCATION EXPO 2015
+								//- option(value="THE BRIGHT OCTOBER CAMP 2015") THE BRIGHT OCTOBER CAMP 2015
 						.form-group
 							label เลขบัตรประจำตัวประชาชน
-							input.form-control(type="text" name="id_card" placeholder="ex.1234567891012")
+							input.form-control(type="text" name="id_card")
 						.form-group
 							label คำนำหน้า
 							select.form-control(type="text" name="prefix")
+								option(value="")
 								option(value="นาย") นาย
 								option(value="นางสาว") นางสาว
 						.form-group
@@ -30,12 +55,14 @@ block content
 						.form-group
 							label ชั้น
 							select.form-control(type="text" name="class")
+								option(value="")
 								option(value="ม.4") ม.4
 								option(value="ม.5") ม.5
 								option(value="ม.6") ม.6
 						.form-group
 							label สาย
 							select.form-control(type="text" name="program")
+								option(value="")  
 								option(value="สายวิทย์") สายวิทย์
 								option(value="สานศิลป์") สายศิลป์
 						.form-group
@@ -45,7 +72,7 @@ block content
 							label เบอร์โทรศัพท์(ที่สามารถติดต่อได้)
 							input.form-control(type="text" name="mobile")									
 						.form-group
-							label อีเมลล์
+							label อีเมล์
 							input.form-control(type="email" name="email")
 						.form-group
 							label Facebook
@@ -59,12 +86,34 @@ block content
 						.form-group
 							label ความสัมพันธ์
 							select.form-control(type="text" name="parents_relationship")
+								option(value="")
 								option(value="บิดา") บิดา
 								option(value="มารดา") มารดา
 								option(value="ญาติ") ญาติ
 						.form-group
 							label เบอร์โทรศัพท์ผู้ปกครอง
-							input.form-control(type="text" name="parents_number")					
-					button.btn.btn-success.pull-right(type='submit' form='register_form') ลงทะเบียนเรียน
-			
-			
+							input.form-control(type="text" name="parents_number")
+						button#btn-register.btn.btn-success.pull-right(type="button") ลงทะเบียนเรียน						
+						button#btn-register-trick.btn.btn-success.pull-right.hidden(type="submit" form="register_form-lg")									
+
+	#confirmModal.modal.fade(role="dialog")
+		.modal-dialog
+			.modal-content
+				.modal-header.bg-primary
+					h4.modal-title การสมัครเสร็จสมบูรณ์
+				.modal-body
+					p ขอบคุณคะ การสมัครเรียนของคุณเสร็จสมบูรณ์
+					p *กรุณาโอนชำระค่าเรียนภายใน 3 วันหลังจากสมัครเรียน มิฉะนั้นจะถือว่าการสมัครเป็นโมษะ จำเป็นต้องสมัครใหม่อีกครั้ง
+					p *หลังการโอนชำระค่าเรียนเสร็จสิ้น จะต้องเข้าเว็บไซต์ ในเมนู "แจ้งฃำระเงิน" เพื่อกรอกข้อมูลให้ครบถ้วน พร้อมกดยืนยัน การสมัครจึงจะเสร็จสิ้นอย่างสมบูรณ์			
+				.modal-footer
+					button(type="button")#btn-confirm.btn.btn-primary ยืนยัน
+
+	#conditionModal.modal.fade(role="dialog")
+		.modal-dialog
+			.modal-content
+				.modal-header.bg-primary
+					h4.modal-title เงื่อนไขการสมัคร
+				.modal-body
+					img.col-lg-12.col-md-12(src="/images/condition.png")
+				.modal-footer
+					button(type="button" data-dismiss="modal")#btn-confirm.btn.btn-primary ยอมรับเงื่อนไข

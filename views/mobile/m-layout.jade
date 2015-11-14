@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		title สถาบันกวดวิชาเดอะไบร์ท
+		link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
+		link(rel="stylesheet" href="/bower_components/font-awesome-4.3.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")
+		link(rel='stylesheet' href='/stylesheets/m-style.css')
+
+	body
+		.container-fluid
+			.row
+				.header
+					.logo.col-sm-6
+						a(href="/mobile"): img.col-sm-12(src="/images/navbar/header-logo.png")
+					.social.col-sm-6
+						a(href="#"): i.fa.fa-instagram.fa-5x.pull-right						
+						a(href="#"): i.fa.fa-youtube-play.fa-5x.pull-right
+						a(href="http://www.facebook.com/thebrightfan"): i.fa.fa-facebook-square.fa-5x.pull-right
+
+
+		block content
+
+		.container-fluid
+			.row
+				.footer.navbar-fixed-bottom
+					a(href="tel:0925910006"): #footer-hotline.btn-footer 
+						h1 092-591-0006
+					a(href="/mobile#register"): #footer-register.btn-footer
+						h1 สมัครเรียน
+
+	script(src="/bower_components/jquery/dist/jquery.min.js")
+	script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+	script(src="/bower_components/fastclick/lib/fastclick.js")
+	script(type="text/javascript" src="/bower_components/moment/min/moment.min.js")
+	script(type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js")
+	script(type="text/javascript" src="/javascripts/validation.js")		
+	script(type="text/javascript" src="/javascripts/datetime.js")
+	script(type="text/javascript" src="/javascripts/m-modals.js")		

@@ -4,7 +4,18 @@ html
     title The Bright   
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
-    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
     link(rel='stylesheet' href='/stylesheets/style.css')
-  body(style="padding-top:0")
-     a(href="/home"): #landing.col-lg-12.col-sm-12
+  body#landing(style="padding-top:0")
+    .container.visible-lg-block
+        .row
+            .landing-button.col-lg-12.col-md-12
+                a(href="/home"): img.col-lg-3(src="/images/buttons/btn-home.png")
+                a(href="/expo"): img.col-lg-3.extend(src="/images/buttons/btn-expo.png")
+    script(type="text/javascript" src="/javascripts/mobile.js")
+    
+
+
+
+
+     
+           

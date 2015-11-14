@@ -4,9 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer = require('multer');
+var moment = require('moment');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/theBrightDb');
+var db = mongoose.connection;
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var database = require('./routes/db');
 
 var app = express();
 
@@ -21,9 +29,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(multer({ 
+  dest: './public/uploads/',
+  rename: function (fieldname, filename) {    
+    return "slip-" + moment().format('MMMM Do YYYY-h:mm:ss a');
+  }
+
+}));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/db', database);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -32,7 +48,11 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
+// MongoDB
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("Mongodb open connection");
+});
 
 // development error handler
 // will print stacktrace

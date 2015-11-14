@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'DBAdmanXRegular';
+    src: url('dbadmanx.eot');
+    src: url('dbadmanx.eot') format('embedded-opentype'),
+         url('dbadmanx.woff') format('woff'),
+         url('dbadmanx.ttf') format('truetype'),
+         url('dbadmanx.svg#DBAdmanXRegular') format('svg');
+}

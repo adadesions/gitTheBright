@@ -1,0 +1,35 @@
+extends layout
+block content
+	.container.visible-lg-block.visible-md-block		
+		.row.congratulation
+			#carousel-example-generic.carousel.slide(data-ride='carousel')
+				// Indicators
+				ol.carousel-indicators					
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')
+					li(data-target='#carousel-example-generic', data-slide-to='3')
+					li(data-target='#carousel-example-generic', data-slide-to='4')
+					li(data-target='#carousel-example-generic', data-slide-to='5')
+				// Wrapper for slides
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='/images/congratulation/congrad-cover.jpg', alt='...')
+					.item
+						img(src='/images/congratulation/congrad1.jpg', alt='...')
+					.item
+						img(src='/images/congratulation/congrad2.jpg', alt='...')
+					.item
+						img(src='/images/congratulation/congrad3.jpg', alt='...')
+					.item
+						img(src='/images/congratulation/congrad4.jpg', alt='...')
+					.item
+						img(src='/images/congratulation/congrad5.jpg', alt='...')				    
+					
+				// Controls
+				a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+					span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+					span.sr-only Previous
+				a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+					span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+					span.sr-only Next

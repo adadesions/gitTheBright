@@ -1,92 +1,104 @@
 doctype html
 html
   head
-    title The Bright   
+    title สถาบันกวดวิชาเดอะไบร์ท    
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
-    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/bower_components/font-awesome-4.3.0/css/font-awesome.min.css")
     link(rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")
     link(rel='stylesheet' href='/stylesheets/style.css')
-  body
+
+  body  
     .container
-      .row        
-        a(href="/home"): #logo.col-md-5
-        .col-md-1                  
-        #social.col-md-6.text-right       	
-          a(href="#"): i.fa.fa-facebook-official.fa-4x.fa-fw
-          a(href="#"): i.fa.fa-youtube-square.fa-4x.fa-fw
-          a(href="#"): i.fa.fa-instagram.fa-4x.fa-fw          
-          br
-          a(href="/form/register"): button(type="button").btn.btn-success สมัครเรียน       
+      .row         
+        .header.col-lg-12
+          a(href="/home"): img(src="/images/navbar/header-logo.png")#logo.col-lg-2        
+          .col-lg-4                          
+          .social.col-lg-6.text-right.pull-right                    
+            a(href="https://www.facebook.com/thebrightfan"): i.fa.fa-2x.fa-fw
+                img(src="/images/icons/icon-facebook.png")          
+            a(href="https://instagram.com/thebrightacademy"): i.fa.fa-2x.fa-fw
+                img(src="/images/icons/icon-ig.png")
+            a(href="#"): i.fa.fa-2x.fa-fw
+                img(src="/images/icons/icon-line.png")            
+            a(href="#"): i.fa.fa-2x.fa-fw
+                img(src="/images/icons/icon-youtube.png")                                      
+            .hotline
+              img(src="/images/navbar/header-hotline.png")
+            
       .row
         nav.navbar.navbar-default
             .container-fluid
-                .navbar-header
-                     button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                     span.sr-only Toggle navigation
-                     span.icon-bar
-                     span.icon-bar
-                     span.icon-bar
-                         #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                             ul#topbar.nav.navbar-nav.text-right
-                                 li.active
-                                     a(href='/home')
-                                         | หน้าแรก                                        
-                                         span.sr-only (current)
-                                  li.dropdown
-                                     a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-expended='false')
-                                         | เกี่ยวกับเรา
-                                         span.caret
-                                      ul.dropdown-menu(role='menu')
-                                        li
-                                          a(href="/about/knows") รู้จักกับเดอะไบร์ท
-                                        li
-                                          a(href="/about/why") ทำไมต้องเดอะไบร์ท
-                                   li
-                                     a(href="#")
-                                      | ทีมเดอะไบร์ท
-                                   li
-                                     a(href="#")
-                                      | เด็กเก่ง
-                                   li
-                                     a(href="/brochure")
-                                      | คอร์สเรียน
-                                   li
-                                     a(href="#")
-                                      | ภาพประทับใจ
-                                   li
-                                     a(href="/form/register")
-                                      | สมัครเรียน
-                                   li
-                                     a(href="/form/payment")
-                                      | แจ้งชำระเงิน
-                                   li
-                                     a(href="#")
-                                      | ติอต่อเรา 
-
-
+                .navbar-header                     
+                     button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='topbar')
+                       span.sr-only Toggle navigation
+                       span.icon-bar
+                       span.icon-bar
+                       span.icon-bar
+               #topbar.collapse.navbar-collapse
+                   ul.nav.navbar-nav.text-right
+                        li
+                           a(href='/home')
+                               | หน้าแรก                                        
+                               span.sr-only (current)
+                        li.dropdown
+                           a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-expended='false')
+                               | เกี่ยวกับเรา
+                               span.caret
+                            ul.dropdown-menu(role='menu')
+                              li
+                                a.star(href="/about/knows") รู้จักกับเดอะไบร์ท
+                              li
+                                a.star(href="/about/whys") ทำไมต้องเดอะไบร์ท
+                         li
+                           a(href="/team")
+                            | ทีมเดอะไบร์ท
+                         li
+                           a(href="/congratulation")
+                            | เด็กเก่ง
+                         li.dropdown
+                           a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-expended='false')                        
+                            | คอร์สเรียน
+                            span.caret
+                            ul.dropdown-menu(role="menu")
+                              li
+                                a.star(href="/courses/hybrid-m4") HYBRID M4
+                              li 
+                                a.star(href="/courses/hybrid-m5") HYBRID M5
+                              li  
+                                a.star(href="/courses/coach-me") COACH ME PROGRAM
+                              li  
+                                a.star(href="/thebright-expo") THE BRIGHT EDUCATION EXPO 2015
+                              li 
+                                a.star(href="/courses/october2015") THE BRIGHT OCTOBER CAMP 2015
+                         li
+                           a(href="/comingsoon")
+                            | ภาพประทับใจ
+                         li
+                           a(href="/how-to-apply")
+                            | วิธีการสมัครเรียน
+                         li
+                           a(href="/form/payment")
+                            | แจ้งชำระเงิน
+                         li
+                           a(href="/contactus")
+                            | ติอต่อเรา 
+    
 
     block content
 
     .container-fluid
          .row
              .footer
-               h1 TheBright.in.th
-               p footer menu and link
+                img(src="/images/navbar/footer1.jpg")
+               
     script(src="/bower_components/jquery/dist/jquery.min.js")          
     script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
     script(type="text/javascript" src="/bower_components/moment/min/moment.min.js")
     script(type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js")
-    script(type='text/javascript').
-      $(document).ready(function(){
-          $('#datetimepicker1').datetimepicker({
-              format: "DD/MM/YYYY",
-              viewMode: 'years'
-            });
-          $('#datetimepicker2').datetimepicker();
-
-          $('.fa-calendar').click(function(){
-              $('#datetimepicker1').trigger("focus");
-              $('#datetimepicker2').trigger("focus");
-            });
-        });
+    script(type="text/javascript" src="/javascripts/validation.js")
+    script(type="text/javascript" src="/javascripts/slideshow.js")
+    script(type="text/javascript" src="/javascripts/mynavbar.js")
+    script(type="text/javascript" src="/javascripts/datetime.js")
+    script(type="text/javascript" src="/javascripts/mobile.js")    
+                 

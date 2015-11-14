@@ -1,0 +1,32 @@
+extends layout
+block content
+  .container
+    .row
+      #check
+        h1 TBID: #{res.thebright_id}
+        table.table
+          tr
+            th.col-lg-3.col-md-3 Full Name
+            td=res.full_name
+          tr
+            th.col-lg-3.col-md-3 School
+            td=res.school
+          tr
+            th.col-lg-3.col-md-3 E-mail
+            td=res.email
+          tr
+            th.col-lg-3.col-md-3 Tel
+            td 0#{res.tel}
+          tr
+            th.col-lg-3.col-md-3 Amount
+            td=res.amount
+          
+        form#confirm_form(method='post' action='/db/checkin')
+          .form-group
+            input(type="text" name="tbid" value=res.thebright_id).hidden
+            br
+            label(for="code") Confirm Code            
+            input(type="password" name="code")#code.form-control            
+        button(type="submit" form="confirm_form").btn.btn-success.pull-right Confirm
+        br
+           

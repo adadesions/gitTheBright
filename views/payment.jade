@@ -1,17 +1,31 @@
 extends layout
-block content 
-	.container
+block content 		
+	.container.visible-lg.visible-md
 		.row
-			.payment-form.col-lg-12.col-sm-12
+			#carousel-example-generic.carousel.slide(data-ride='carousel')				
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')				
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='/images/banner/banner-transfer.png', alt='...')
+		.row
+			.payment-form.col-lg-12.col-sm-12				
 				h2 แจ้งการชำระเงิน
 				hr
-				form#payment_form(method="post" action='')
+				form#payment_form(method="post" action='/db/paid' enctype="multipart/form-data")
 					.form-group
-						label รหัสการสั่งซื้อสินค้า
-						input.form-control(type="text" name="order_id")
+							label คอร์สเรียน
+							select.form-control(type="text" name="course")
+								option(value="")
+								option(value="HYBRID M.4") HYBRID M.4 
+								option(value="HYBRID M.5") HYBRID M.5
+								option(value="COACH ME") COACH ME (คอร์สรับรองผล)
+								option(value="THE BRIGHT EDUCATION EXPO 2015") THE BRIGHT EDUCATION EXPO 2015
+								option(value="THE BRIGHT OCTOBER CAMP 2015") THE BRIGHT OCTOBER CAMP 2015
 					.form-group
 						label ช่องทางการชำระเงิน
 						select.form-control(name="channel")
+							option(value="")
 							option(value="transfer") โอนเงิน
 							option(value="Paypal") Paypal
 					.form-group
@@ -28,15 +42,42 @@ block content
 					hr
 					.form-group
 						label ชื่อ-นามสกุล
-						input.form-control(type="text" name="fullname")
+						input.form-control(type="text" name="full_name")
 					.form-group
-						label อีเมลล์
-						input.form-control(type="email" name="email")
+							label โรงเรียน
+							input.form-control(type="text" name="schoolname")
+					.form-group
+						label อีเมล์
+						input.form-control(type="text" name="email")
 					.form-group
 						label เบอร์โทรศัพท์
 						input.form-control(type="text" name="tel")
 					.form-group
 						label รายละเอียดเพิ่มเติม
-						textarea.form-control(type="text" name="detail" rows="4" cols="50")					
-					button.btn.btn-success.pull-right(type='submit' form='payment_form') ส่งหลักฐานการชำระเงิน
+						textarea.form-control(type="text" name="detail" rows="4" cols="50")
+					button#btn-payment.btn.btn-success.pull-right(type='button') ส่งหลักฐานการชำระเงิน
+					button#btn-payment-trick.btn.btn-success.pull-right.hidden(type='submit' form='payment_form')
 
+	#confirmModal.modal.fade(role="dialog")
+		.modal-dialog
+			.modal-content
+				.modal-header.bg-primary
+					h4.modal-title การแจ้งชำระเงินเสร็จสมบูรณ์
+				.modal-body
+					p ขอบคุณคะ ทางสถาบันกวดวิชาเดอะไบร์ทได้รับข้อมูลการสมัครและแจ้งชำระเงินเรียบร้อยแล้ว 
+						br
+						|* นักเรียนสามารถ "ตรวจสอบรายชื่อ" ได้ในทุกๆวันศุกร์ 
+						br
+						|* กด "ยืนยัน" เพื่อรับรหัส The Bright ID ยืนยันสิทธิ์เข้างาน						
+				.modal-footer
+					button(type="button")#btn-confirm.btn.btn-primary ยืนยัน
+
+	#conditionModal.modal.fade(role="dialog")
+		.modal-dialog
+			.modal-content
+				.modal-header.bg-primary
+					h4.modal-title เงื่อนไขการสมัคร
+				.modal-body
+					img.col-lg-12.col-md-12(src="/images/condition.png")
+				.modal-footer
+					button(type="button" data-dismiss="modal")#btn-confirm.btn.btn-primary ยอมรับเงื่อนไข

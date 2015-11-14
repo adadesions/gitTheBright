@@ -1,0 +1,39 @@
+extend layout
+block content
+  .container
+    .row
+      #qr-vip.col-lg-12      
+        .row
+          .col-lg-6
+            img.logo.col-lg-4(src="/images/navbar/header-logo.png")
+            h2 #{res.thebright_id}
+          .col-lg-6.text-right
+            h4 Seat No.
+            p XXX
+        br
+        .row
+          .col-lg-6
+            h4 The Bright Education Expo 2015
+            p HAT YAI
+          .col-lg-6
+            h4 ZONE
+            P VIP
+        br
+        .row
+          .col-lg-6
+            h4 Student Name
+            p=res.full_name
+          .col-lg-6
+            h4 E-mail
+            p=res.email
+        br
+        .row          
+          .col-lg-12.text-center            
+            img(src="/qrcode/"+res.thebright_id+".png")
+    .row
+      #qr-vip.col-lg-12.text-center
+        button(type='button')#print.btn.btn-primary.col-lg-6.col-lg-offset-3 Print    
+        
+
+          
+        

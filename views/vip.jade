@@ -1,0 +1,17 @@
+extend layout
+block content
+  base(href='/')
+  .container(ng-app='vipApp' ng-controller='vipCtrl as vip')
+    .row
+      #vip
+        h1 TheBright Id : {{vip.$route.current.params.tbid}}
+        a(href="/vip/HYEX121500") TEST
+        br
+        a(href="/vip/") BACK
+        pre $location.path() = {{vip.$location.path()}}
+        pre $route.current.params = {{vip.$route.current.params}}
+        pre $routeParams = {{vip.$routeParams}}
+    
+  script(src="/bower_components/angular/angular.min.js")  
+  script(src='/bower_components/angular-route/angular-route.min.js')
+  script(src="/javascripts/controllers/vipController.js")

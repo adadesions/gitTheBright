@@ -1,0 +1,39 @@
+extends report-layout
+block content 
+	.container-fluid
+		.row
+			.report-body
+				h1.text-center Student registered report				
+				h4.text-center NumberOfStudents = #{records.length} records
+				.pi.collapse= paids_index
+				table.table.table-hover.col-lg-12
+					tr
+						th No.
+						th Id Card
+						th Course
+						th Prefix
+						th Fullname
+						th School
+						th Class
+						th Program
+						th Address
+						th Mobile No.
+						th Email
+						th FaceBook
+						th Line
+					each record,index in records.length ? records:['No record']
+						tr.warning
+							td=index+1
+							td=record.id_card
+							td=record.course 
+							td=record.prefix
+							td=record.full_name
+							td=record.school
+							td=record.level
+							td=record.major
+							td=record.address
+							td=record.mobile
+							td=record.email 
+							td=record.facebook_account
+							td=record.line_account	
+

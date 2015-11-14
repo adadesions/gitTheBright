@@ -1,0 +1,10 @@
+extends report-layout
+block content
+	.container-fluid
+		.row
+			#report-student.report-button.col-lg-4.col-sm-12
+				a(href="/db/reports/report-student"): h1.text-center Student Report
+			#report-paid.report-button.col-lg-4.col-sm-12
+				a(href="/db/reports/report-paid"): h1.text-center Paid Report
+			#report-checkin.report-button.col-lg-4.col-sm-12
+				a(href="/db/reports/report-checkin"): h1.text-center Checkin Report

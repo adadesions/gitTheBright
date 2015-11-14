@@ -1,0 +1,34 @@
+extends report-layout
+block content 
+	.container-fluid
+		.row
+			.report-body
+				h1.text-center Paid report				
+				h4.text-center NumberOfPaids = #{records.length} records		
+
+				table.table.table-hover.col-lg-12
+					tr
+						th No.
+						th Course
+						th Pays via
+						th DateTime
+						th Fullname
+						th Amount
+						th Slip
+						th Detail
+						th Email
+						th Mobile
+					each record,index in records.length ? records:['No record']
+						tr.warning
+							td=index+1
+							td=record.course
+							td=record.channel 
+							td=record.paid_datetime
+							td=record.full_name
+							td=record.amount
+							td
+								a(href="/"+record.transfer_slip): img.col-lg-12.col-sm-12(src='/'+record.transfer_slip)
+							td=record.detail
+							td=record.email
+							td=record.tel 							
+

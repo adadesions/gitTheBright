@@ -1,0 +1,23 @@
+extends ../layout
+block content
+	.container
+		.row
+			#carousel-example-generic.carousel.slide(data-ride='carousel')				
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')				
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='/images/banner/'+img_path, alt='Banner')
+		br
+		br
+		.row
+			.poster
+				img.col-lg-12(src="/images/poster/"+poster_path+".png", alt="poster")
+		.row
+			.poster
+				a(href="/form/register"): img.col-lg-3(src="/images/expo/icon-apply.png")
+				a(href="/images/pay.jpg"): img.col-lg-3(src="/images/expo/icon-print.png")
+				a(href="/form/payment"): img.col-lg-3(src="/images/expo/icon-transfer.png")
+				a(href="/accommodations"): img.col-lg-3(src="/images/expo/icon-teepak.png")			

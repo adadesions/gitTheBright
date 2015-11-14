@@ -1,22 +1,51 @@
 extends layout
 
 block content
-	.container
+	.container.visible-lg-block.visible-md-block		
 		.row
-			a(href="/brochure"): #banner.col-lg-12.col-sm-12
+			#carousel-example-generic.carousel.slide(data-ride='carousel')
+				// Indicators
+				ol.carousel-indicators					
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')
+					li(data-target='#carousel-example-generic', data-slide-to='3')
+					li(data-target='#carousel-example-generic', data-slide-to='4')					
+				// Wrapper for slides
+				.carousel-inner(role='listbox')					
+					.item.active
+						a(href="/expo"): img(src='/images/banner/banner1.jpg', alt='...')
+					.item
+						a(href="/courses/coach-me"): img(src='/images/banner/banner2.jpg', alt='...')
+					.item
+						a(href="/courses/hybrid-m4"): img(src='/images/banner/banner3.jpg', alt='...')
+					.item
+						a(href="/courses/hybrid-m5"): img(src='/images/banner/banner4.jpg', alt='...')
+					.item
+						a(href="/comingsoon"): img(src='/images/banner/banner5.jpg', alt='...')				    			    
+					
+				// Controls
+				a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+					span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+					span.sr-only Previous
+				a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+					span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+					span.sr-only Next
+
+		.row
+			a(href="/thebright-expo"): .special-event.col-lg-12.col-sm-12				
 		.row
 			.shotcuts
-				.s-item.col-md-3.col-sm-12
-					a(href='/form/register'): img(src='/images/shotcuts/booking.jpg')
-					a(href='#'): img(src='/images/shotcuts/expo.jpg')
-				.s-item.col-md-3.col-sm-12
-					a(href='/form/payment'): img(src='/images/shotcuts/transfer.jpg')
-					a(href='#'): img(src='/images/shotcuts/camp.jpg')
-				.s-item.col-md-3.col-sm-12
-					a(href='#'): img(src='/images/shotcuts/download.jpg')
-					a(href='#'): img(src='/images/shotcuts/coachme.jpg')
-				.s-item.col-md-3.col-sm-12
-					a(href='#'): img(src='/images/shotcuts/private.jpg')
-					a(href='/brochure'): img(src='/images/shotcuts/brochure.jpg')
+				.row.s-item.col-lg-12					
+					a.col-lg-3(href='/booking'): img(src='/images/shotcuts/IconBooking.png')					
+					a.col-lg-3(href='/form/payment'): img.border-left.border-right(src='/images/shotcuts/IconTransfer.png')					
+					a.col-lg-3(href='/pdf/pay.pdf'): img.border-left.border-right(src='/images/shotcuts/IconDownload.png')					
+					a.col-lg-3(href='/comingsoon'): img.border-left(src='/images/shotcuts/IconPrivate.png')
+				.row.col-lg-12
+					hr
+				.row.s-item.col-lg-12					
+					a.col-lg-3(href='/thebright-expo'): img(src='/images/shotcuts/IconExpo.png')					
+					a.col-lg-3(href='/comingsoon'): img.border-left.border-right(src='/images/shotcuts/IconCamp.png')								
+					a.col-lg-3(href='/courses/coach-me'): img.border-left.border-right(src='/images/shotcuts/IconCoach.png')					
+					a.col-lg-3(href='/comingsoon'): img.border-left(src='/images/shotcuts/IconBrochure.png')		
 				
-					

@@ -1,0 +1,24 @@
+extends m-layout
+block content
+  - var display = status
+  .container-fluid
+    if display
+      .row
+        #qrcode.col-sm-12        
+          img.col-sm-12(src="/qrcode/"+res.thebright_id+".png")
+      .row
+        #qrcode-detail.col-sm-12
+           h1 TheBright ID
+           p=res.thebright_id
+           h1 ZONE
+           p VIP
+           h1 Student Name
+           p=res.full_name
+           h1 Email
+           p=res.email
+    else
+      #qrcode-detail.col-sm-12
+        h1 Not Found
+        a(href="/mobile/m-searchsmp") 
+          p Back
+          

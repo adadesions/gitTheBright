@@ -1,121 +1,110 @@
 body {
-  padding-top: 20px;  
+  padding-top: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #F2F1EF;
-  background-image: url('/images/landing.jpg');
+  background-image: url('/images/wallpaper-current.jpg');
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 120% 100%;	
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
 a {
   text-decoration: none;
-  color: #424242; 
+  color: #424242;
 }
 
 hr{
-	background-color: #BFBFBF;
+	background-color: #AAA;
 	height: 1px;
 }
+.header{
+	background-image: url('/images/navbar/header-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-bottom: 30px;
+}
+.hotline{
+	position: absolute;
+	width: 120px;
+	height: 25px;
+	margin-top: 10px;
+	margin-right: 30px;
+	right: 0;
+}
+.social{
+		margin-top: 50px;
+	}
+	.social button{
+		margin-top: 10px;
+		width: 260px;
+	}
+	.social i{
+		margin-right: 10px;
+	}
+	.social img{
+		width: 100%;
+		height: 100%;
+	}
+
 nav{
-	margin-top: 20px;
+	margin-top: 0;
 }
 
-
-#landing{	
-	background-image: url('/images/landing.jpg');
-	height: 700px;
+#landing{
+	background-image: url('/images/landing1940.jpg');
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;	
+	background-position: top;
+	background-size: 100% 100%;
 }
 
 #logo{
-	background-image: url("/images/navbar/thebright_logo1.jpg");
-	height: 100px;		
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;	
+	height: 120%;
+	width: 270px;
+	margin-left: 5px;
+	margin-top: 20px;
 }
 
-#social{
-	/*border: 1px solid #000;*/
-}
-#social button{
-	margin-top: 20px;
-	width: 220px;
-}
-.fa-youtube-square{
-	color: #C0392B;
-}
-.fa-instagram{
-	color: #96281B;
-}
-.fa-google-plus-square{
-	color: #CF000F;
-}
-.fa-facebook-official{
-	color: #1F3A93;
-}
 
 #banner{
 	background-image: url('/images/banner/banner1.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100% 100%;	
+	background-size: 100% 100%;
 	height: 350px;
 }
 
 .shotcuts{
+	display: block;
 	background-color: #FFF;
-	height: 480px;	
-	border-top: 5px solid #0277BD;	
-	padding-top: 20px;	
+	overflow: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+}
+
+.border-left{
+	border-left: 1px solid #AAA;
+}
+.border-right{
+	border-right: 1px solid #AAA;
 }
 .s-item{
-	height: 170px;	
+	height: auto;
+	float: left;
+	margin-bottom: 20px;
 }
 .s-item img{
-	height: 200px;
-	margin-bottom: 20px;
-	border-radius: 30px;
+	height: 220px;
+	padding-right: 20px;
 }
 .s-item img:hover{
-	border: 8px solid #36D7B7;
+	border-bottom: 5px solid #36D7B7;
 }
-
-.poster{
-	height: 400px;			
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: 100% 300%;	
-	margin-bottom: 50px;
+.shotcuts-glow{
+	width: 300px;
 }
-#m4-poster-header{
-	background-color: #4CAF50;
-	color: #FFF;
-}
-#m5-poster-header{
-	background-color: #03A9F4;
-	color: #FFF;
-}
-#m6-poster-header{
-	background-color: #FF5722;
-	color: #FFF;
-}
-#m4{
-	background-image: url('/images/poster/m45_poster.png');
-	border-bottom: 5px solid #4CAF50; 
-}
-
-#m5{
-	background-image: url('/images/poster/m45_poster1.png');
-	border-bottom: 5px solid #03A9F4; 
-}
-
-#m6{
-	background-image: url('/images/poster/m6_poster.png');
-	border-bottom: 5px solid #FF5722;
+.shotcuts-glow:hover{
+	border-bottom: 5px solid #36D7B7;
 }
 
 #knows{
@@ -123,7 +112,38 @@ nav{
 	height: 650px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100% 100%;	
+	background-size: 100% 100%;
+}
+
+#expo, .poster{
+	background-color: #FFF;
+	overflow: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80% 100%;
+	padding-bottom: 4em;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+  #expo a,img{
+    margin-top: 2em;
+  }
+
+
+#contactus{
+	background-image: url('/images/contactus.jpg');
+	height: 640px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+#mapsModal{
+	width: 100%;
+	height: 100%;
+}
+.modal-body{
+	overflow: auto;
 }
 
 .register-form{
@@ -134,7 +154,7 @@ nav{
 	padding-bottom: 30px;
 }
 .form-group i{
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 .payment-form{
@@ -145,12 +165,239 @@ nav{
 	padding-bottom: 30px;
 }
 
+.team{
+	background-image: url('/images/tutors.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 720px;
+}
 
-.footer{
-	background-color: #000;
-	height: 200px;
+.whys{
+	background-image: url('/images/whys.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 720px;
+}
+
+.special-event{
+	background-image: url('/images/events/event1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 1280px;
+	margin-top: 20px;
+}
+
+.how-to{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: auto;
+	overflow: auto;
+}
+
+.accommodations{
+	background-color: #FFF;
+	overflow: auto;
+	padding: 30px;
+}
+
+.accommodations img{
+	margin-bottom: 30px;
+}
+
+.congratulation{
+	padding: 20px;
+	overflow: auto;
+	background-color: #FFF;
+}
+
+.course-icons{
+	background-color: #FFF;
+	overflow: auto;
+	padding: 40px;
 	padding-top: 20px;
-	padding-left: 180px;
-	padding-right: 180px;
+}
+.course-icons img{
+	width: 400px;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.coachme{
+	background-color: #FFF;
+	overflow: auto;
+	padding: 10px;
+}
+.coachme img{
+	height: 100%;
+	width: 100%;
+}
+
+.courses{
+	background-color: #FFF;
+	overflow: auto;
+	padding: 20px;
+}
+.footer{
+	background-image: url('/images/navbar/footer1.jpg');
+	background-repeat: none;
+	overflow: auto;
+}
+.footer img{
+	height: 100%;
+	width: 100%;
+}
+#logo-footer{
+	background-image: url("/images/navbar/thebright_logo.png");
+	height: 108px;
+	width: 250px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.footer span{
+	position: absolute;
+	bottom: -110px;
+}
+
+#social-footer{
+	margin-bottom: 10px;
+}
+
+#address{
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.landing-button{
+	position: absolute;
+	bottom: 0;
+	margin-left: 140px;
+}
+
+.extend{
+	height: 44px;
+	width: 350px;
+}
+
+/* REPORT SECTION*/
+.report-header{
+	position: fixed;
+	z-index: 10000;
+	background-color: #009688;
 	color: #FFF;
+	padding: 2em;
+	border-bottom: 10px solid #EC407A;
+	margin-bottom: 0.5em;
+}
+	.report-header h1{
+		margin-top: 1.5em;
+	}
+
+.report-body{
+	margin-top: 15em;
+}
+	.report-body h1{
+		color: #FFF;
+	}
+.report-button{
+	background-color: #3F51B5;
+	color: #FFF;
+	margin-top: 14.5em;
+	padding: 3em;
+}
+.report-button:hover{
+	background-color: #5C6BC0;
+}
+.report-button a{
+	color: #FFF;
+}
+
+table{
+	margin-top: 1em;
+}
+th{
+	background-color: #4DB6AC;
+	color: #FFF;
+	text-align: center;
+}
+
+#paid-complete{
+  background-color: #FFF;
+  padding: 2em;
+  color: #555;
+  /*padding-top: 1em;*/
+  margin-bottom: 2em;
+  border-radius: 1em;
+}
+  #paid-complete p{
+    font-size: 1.5em;
+  }
+
+#expo-lists{
+  background-color: #FFF;
+  padding: 1em;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+  #expo-lists h1,h4{
+    color: #555;
+  }
+
+#qr-vip,#check{
+  background-color: #FFF;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  padding-left: 3em;
+  padding-right : 3em;
+}
+  #qr-vip,#check h1,h2{
+    color: #555;
+  }
+  #qr-vip td,tr{
+    border: none;
+    font-size: 1.3em;
+  }
+  #qr-vip .logo{
+    margin-top: 0.5em;
+    margin-left: -0.8em;
+  }
+  #qr-vip p{
+    font-size: 1.3em;
+    font-weight:bold;
+  }
+@media print{
+  body *{
+    visibility: hidden;
+  }
+
+  #qr-vip *{
+    visibility: visible;
+  }
+  #qr-vip{
+    position: absolute;
+    top:0;
+    left:150px;
+
+  }
+  #print{
+    visibility: hidden;
+  }
+  #qr-vip img{
+    width: 300px;
+  }
+  #qr-vip h4,p{
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+	#report-paid{
+		margin-top: 0;
+	}
 }

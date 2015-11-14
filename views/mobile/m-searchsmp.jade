@@ -1,0 +1,10 @@
+extends m-layout
+block content
+  .container-fluid
+    .row
+      #searchsmp.col-sm-12
+        form(method='get' action='/mobile/m-smartpass')#searchsmp_form
+          .form-group.text-center
+            label(for='searchsmp') Search by TheBright ID
+            input(type="text" name="searchsmp" placeholder="HYEX123456" style="text-transform:uppercase")#searchsmp.form-control 
+            button(type='submit').btn.btn-success.text-center.col-sm-12 Search

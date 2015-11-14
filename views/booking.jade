@@ -1,0 +1,20 @@
+extends layout
+block content 
+	.container.visible-lg-block.visible-md-block
+		.row
+			#carousel-example-generic.carousel.slide(data-ride='carousel')				
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')				
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='/images/banner/banner-apply.jpg', alt='...')
+		.row
+			.course-icons.col-lg-12.col-md-12
+				.row
+					a(href="/form/register"): img.col-lg-6(src='/images/courseIcon/icon-hybrid.png')
+					a(href="/form/register"): img.col-lg-6(src='/images/courseIcon/icon-coach.png')
+				.row
+					a(href="/thebright-expo"): img.col-lg-6(src='/images/courseIcon/icon-expo.png')
+					a(href="/comingsoon"): img.col-lg-6(src='/images/courseIcon/icon-camp.png')

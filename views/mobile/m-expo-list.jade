@@ -1,0 +1,25 @@
+extend m-layout
+block content
+  .container-fluid(ng-app="listsApp" ng-controller="listCtrl")
+    .row
+      #expo-lists
+        br
+        h1.text-center ตรวจสอบรายชื่อ VIP Zone
+        h4 Search : 
+          input(type="text" ng-model='search')
+        br
+        table.table.table-hover
+          tr            
+            th.text-center TheBright Id
+            th.text-center Full Name
+            th.text-center School
+          tr(ng-repeat="list in data | filter:search | orderBy:thebright_id").text-center            
+            td {{list.thebright_id}}
+            td {{list.full_name}}
+            td {{list.school}}
+    
+  
+  
+  script(src="/bower_components/angular/angular.min.js")
+  script(src="/javascripts/controllers/listsController.js")
+      

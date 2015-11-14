@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title สถาบันกวดวิชาเดอะไบร์ท
+		link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")
+		link(rel='stylesheet' href='/stylesheets/style.css')
+	body(style="padding:0")
+		.container-fluid
+			.row
+				.report-header.col-lg-12.col-sm-12
+					img.col-lg-3.col-sm-3(src="/images/navbar/header-logo.png")
+					a(href="/db/reports"): h1.pull-right THE BRIGHT REPORT
+
+
+	block content
+
+	script(src="/bower_components/jquery/dist/jquery.min.js")
+	script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+	script(src="/javascripts/reportCheck.js")
+
+
+
